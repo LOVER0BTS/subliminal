@@ -29,7 +29,7 @@ import struct
 
 __all__ = ['EXTENSIONS', 'MIMETYPES', 'Video', 'Episode', 'Movie', 'UnknownVideo',
            'scan', 'hash_opensubtitles', 'hash_thesubdb']
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("subliminal")
 
 #: Video extensions
 EXTENSIONS = ['.avi', '.mkv', '.mpg', '.mp4', '.m4v', '.mov', '.ogm', '.ogv', '.wmv',

@@ -23,7 +23,7 @@ import logging
 
 
 __all__ = ['list_subtitles', 'download_subtitles']
-logger = logging.getLogger(__name__)
+logger = logging.getLogger("subliminal")
 
 
 def list_subtitles(paths, languages=None, services=None, force=True, multi=False, cache_dir=None, max_depth=3, scan_filter=None):
