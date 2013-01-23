@@ -65,7 +65,22 @@ class Subtitulos(ServiceBase):
         subtitles = []
         for sub in soup('div', {'id': 'version'}):
             sub_keywords = split_keyword(self.release_pattern.search(sub.find('p', {'class': 'title-sub'}).contents[1]).group(1).lower())
-            if not keywords & sub_keywords:
+			# extract extra compatible keywords
+            try:
+                extra = sub.find('span', {'class': 'comentario'}).contents[2]
+            except AttributeError:
+                extra = None
+            if extra:
+                search_res = self.extra_keywords_pattern.search(extra)
+                if search_res != None:
+                    extra_key1 = search_res.group(1)
+                    extra_key2 = search_res.group(2)
+                    # add the extra keywords to sub_keywords before checking
+                    if extra_key1 != None:
+                        sub_keywords.add(extra_key1.lower())
+                    if extra_key2 != None:
+                        sub_keywords.add(extra_key2.lower())
+            if keywords and not keywords & sub_keywords:
                 logger.debug(u'None of subtitle keywords %r in %r' % (sub_keywords, keywords))
                 continue
             for html_language in sub.findAllNext('ul', {'class': 'sslist'}):
