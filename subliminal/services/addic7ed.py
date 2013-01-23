@@ -34,6 +34,7 @@ logger = logging.getLogger(__name__)
 
 class Addic7ed(ServiceBase):
     server_url = 'http://www.addic7ed.com'
+    site_url = 'http://www.addic7ed.com'
     api_based = False
     #TODO: Complete this
     languages = language_set(['ar', 'ca', 'de', 'el', 'en', 'es', 'eu', 'fr', 'ga', 'gl', 'he', 'hr', 'hu',

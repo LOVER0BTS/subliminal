@@ -39,6 +39,7 @@ def match(pattern, string):
 
 class TvSubtitles(ServiceBase):
     server_url = 'http://www.tvsubtitles.net'
+    site_url = 'http://www.tvsubtitles.net'
     api_based = False
     languages = language_set(['ar', 'bg', 'cs', 'da', 'de', 'el', 'en', 'es', 'fi', 'fr', 'hu',
                               'it', 'ja', 'ko', 'nl', 'pl', 'pt', 'ro', 'ru', 'sv', 'tr', 'uk',

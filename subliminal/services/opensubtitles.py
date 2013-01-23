@@ -32,6 +32,7 @@ logger = logging.getLogger(__name__)
 
 class OpenSubtitles(ServiceBase):
     server_url = 'http://api.opensubtitles.org/xml-rpc'
+    site_url = 'http://www.opensubtitles.org'
     api_based = True
     # Source: http://www.opensubtitles.org/addons/export_languages.php
     languages = language_set(['aar', 'abk', 'ace', 'ach', 'ada', 'ady', 'afa', 'afh', 'afr', 'ain', 'aka', 'akk',

@@ -27,6 +27,7 @@ logger = logging.getLogger(__name__)
 
 class TheSubDB(ServiceBase):
     server_url = 'http://api.thesubdb.com'
+    site_url = 'http://www.thesubdb.com/'
     user_agent = 'SubDB/1.0 (subliminal/0.6; https://github.com/Diaoul/subliminal)'
     api_based = True
     # Source: http://api.thesubdb.com/?action=languages

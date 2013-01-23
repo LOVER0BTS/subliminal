@@ -32,6 +32,7 @@ logger = logging.getLogger(__name__)
 
 class Subtitulos(ServiceBase):
     server_url = 'http://www.subtitulos.es'
+    site_url = 'http://www.subtitulos.es'
     api_based = False
     languages = language_set(['eng-US', 'eng-GB', 'eng', 'fre', 'por-BR', 'por', 'spa-ES', u'spa', u'ita', u'cat'])
     language_map = {u'Español': Language('spa'), u'Español (España)': Language('spa'), u'Español (Latinoamérica)': Language('spa'),
